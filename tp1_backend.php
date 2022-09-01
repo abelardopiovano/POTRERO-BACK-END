@@ -85,6 +85,7 @@
         
     ?>
     <br>
+    
     <?php
         echo "área del rectángulo = ".$base*$altura;
         
