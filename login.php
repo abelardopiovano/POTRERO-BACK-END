@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     
 </head>
 <style>
@@ -75,10 +75,16 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
     text-align: center;
     color: #297299;
 }
+.login h3
+{
+    text-align: center;
+    color:#6eb6de;
+}
 </style>
 <body>
 <div class="login">
 	<h1>INGRESAR</h1>
+    <h3>usuario: admin       contraseña: 1234</h3>
     <form method="post" action="login.php" >
     	<input type="text" name="user" placeholder="Usuario"  />
         <input type="password" name="password" placeholder="Contraseña"  />
