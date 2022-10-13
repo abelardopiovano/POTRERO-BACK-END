@@ -11,7 +11,7 @@ while($fila=mysqli_fetch_array($datos)){?>
     <td><?php echo $fila['nombre']?></td>
     <td><?php echo $fila['apellido']?></td>
     <td><img src="data:image/jpg;base64,<?php echo base64_encode($fila['imagen']) ?>" alt="" width="100px" height="100px"></td>
-    <td></td>
+   
 
     
    
