@@ -7,7 +7,7 @@ include("menu.php");
 
 
 <?php
-$conexion = mysqli_connect("localhost", "root", "Fanwar321456");
+$conexion = mysqli_connect("localhost", "root", "");
 mysqli_select_db($conexion, "tp_7");
 $consulta = "SELECT * FROM ropa WHERE tipo_de_prenda='buzo'";
 $datos = mysqli_query($conexion, $consulta);
