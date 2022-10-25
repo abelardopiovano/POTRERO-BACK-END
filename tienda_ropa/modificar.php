@@ -2,8 +2,7 @@
 // 1) Conexion
 // a) realizar la conexion con la bbdd
 // b) seleccionar la base de datos a usar
-$conexion = mysqli_connect("127.0.0.1", "root", "");
-mysqli_select_db($conexion, "tienda_potrero");
+include ("conection.php");
 
 // 2) Almacenamos los datos del envío GET
 // a) generar variables para el id a utilizar
@@ -33,7 +32,7 @@ $datos=mysqli_fetch_array($respuesta);
     <body>
         <?php
         // 6) asignamos a diferentes variables los respectivos valores del array $datos.
-        $tipo_prenda=$datos["tipo_prenda"];
+        $tipo_de_prenda=$datos["tipo_de_prenda"];
         $marca=$datos["marca"];
         $talle=$datos["talle"];
         $precio=$datos["precio"];
@@ -44,7 +43,7 @@ $datos=mysqli_fetch_array($respuesta);
         
         <form action="" method="post" enctype="multipart/form-data">
             <label>Tipo de prenda</label>
-            <input type="text" name="tipo_prenda" placeholder="Tipo de Prenda" value="<?php echo "$tipo_prenda"; ?>"> /dentro del value ponemos el dato que que trajimos del egistro para que ya aparezca el el imput y no volver aq escribirlo
+            <input type="text" name="tipo_de_prenda" placeholder="Tipo de Prenda" value="<?php echo "$tipo_de_prenda"; ?>"> <!--dentro del value ponemos el dato que que trajimos del egistro para que ya aparezca el el imput y no volver aq escribirlo-->
             <label>Marca</label>
             <input type="text" name="marca" placeholder="Marca" value="<?php echo "$marca"; ?>">
             <label>Talle</label>
@@ -64,7 +63,7 @@ $datos=mysqli_fetch_array($respuesta);
             // a) generar variables para cada dato a almacenar en la bbdd
             // Si se desea almacenar una imagen en la base de datos usar lo siguiente:
             // addslashes(file_get_contents($_FILES['ID NOMBRE DE LA IMAGEN EN EL FORMULARIO']['tmp_name']))
-            $tipo_prenda=$_POST['tipo_prenda'];
+            $tipo_de_prenda=$_POST['tipo_de_prenda'];
                     $marca=$_POST['marca'];
                     $talle=$_POST['talle'];
                     $precio=$_POST['precio'];
@@ -73,7 +72,7 @@ $datos=mysqli_fetch_array($respuesta);
             // 3') Preparar la orden SQL
             // "UPDATE tabla SET campo1='valor1', campo2='valor2', campo3='valor3', campo3='valor3', campo3='valor3' WHERE campo_clave=valor_clave"
             // a) generar la consulta a realizar
-             $consulta = "UPDATE ropa SET tipo_prenda='$tipo_prenda', marca='$marca', talle='$talle', precio='$precio', imagen='$imagen' WHERE id =$id";
+             $consulta = "UPDATE ropa SET tipo_de_prenda='$tipo_de_prenda', marca='$marca', talle='$talle', precio='$precio', imagen='$imagen' WHERE id =$id";
 
              // 4') Ejecutar la orden y actualizamos los datos
              // a) ejecutar la consulta

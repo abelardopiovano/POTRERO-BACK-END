@@ -26,7 +26,17 @@ $datos = mysqli_query($conexion, $consulta);
             <h2 class="card-title"><?php echo $fila['marca'] ?></h2>
             <h3 class="card-title"><?php echo $fila['talle'] ?></h3>
             <h4 class="card-title"><?php echo $fila['precio'] ?></h4>
-            <a href="#" class="btn btn-primary">COMPRAR</a>
+            <hr>
+            <div>
+            <a href="modificar.php?id=<?php echo $fila['id'];?>" class="btn btn-warning btn-sm">Modificar</button></a>
+            <a href="borrar.php?id=<?php echo $fila['id'];?>" ><button type="button" class="btn btn-danger btn-sm">Eliminar</button></a>
+            </div>
+
+            <div>
+              <hr>
+              <a href="#" class="btn btn-primary btn-lg btn-block">COMPRAR</a>
+            </div>
+
           </div>
         </div>
 
