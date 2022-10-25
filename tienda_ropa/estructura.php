@@ -11,6 +11,3 @@
     
 </body>
 </html>
-<?php
-$_SESSION['PWD']='Fanwar321456'
-?>

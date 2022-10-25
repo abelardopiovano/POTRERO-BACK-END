@@ -1,18 +1,15 @@
 <?php
+include("conection.php");
 include("estructura.php");
 include("menu.php");
+$consulta = "SELECT * FROM ropa WHERE marca='nike'";
+$datos = mysqli_query($conexion, $consulta);
 ?>
 <h1>LISTADO DE PRENDAS</h1>
 
 
 
-<?php
-$conexion = mysqli_connect("localhost", "root", $_SESSION['PWD']);
-mysqli_select_db($conexion, "tp_7");
-$consulta = "SELECT * FROM ropa WHERE marca='nike'";
-$datos = mysqli_query($conexion, $consulta);
 
-?>
 
 <div class="container">
 
