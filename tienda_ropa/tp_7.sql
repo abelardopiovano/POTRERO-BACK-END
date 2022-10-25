@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 13-10-2022 a las 18:12:39
+-- Tiempo de generación: 25-10-2022 a las 22:22:20
 -- Versión del servidor: 5.7.11
--- Versión de PHP: 5.6.18
+-- Versión de PHP: 7.0.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -31,7 +31,7 @@ CREATE TABLE `ropa` (
   `tipo_de_prenda` varchar(100) COLLATE utf8_bin NOT NULL,
   `marca` varchar(100) COLLATE utf8_bin NOT NULL,
   `talle` varchar(10) COLLATE utf8_bin NOT NULL,
-  `precio` decimal(10,0) NOT NULL,
+  `precio` varchar(10) COLLATE utf8_bin NOT NULL,
   `imagen` longblob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 

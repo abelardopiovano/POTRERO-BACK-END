@@ -1,5 +1,5 @@
 <?php
-$conexion = mysqli_connect("localhost", "root", "Fanwar321456");
+$conexion = mysqli_connect("localhost", "root", "");
 mysqli_select_db($conexion, "tp_7");
 
 

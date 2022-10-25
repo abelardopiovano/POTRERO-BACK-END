@@ -28,8 +28,8 @@ $datos = mysqli_query($conexion, $consulta);
             <h4 class="card-title"><?php echo $fila['precio'] ?></h4>
             <hr>
             <div>
-            <a href="http://"><button type="button" class="btn btn-warning btn-sm">Modificar</button></a>
-            <a href="http://"><button type="button" class="btn btn-danger btn-sm">Eliminar</button></a>
+            <a href="modificar.php?id=<?php echo $fila['id'];?>" class="btn btn-warning btn-sm">Modificar</button></a>
+            <a href="borrar.php?id=<?php echo $fila['id'];?>" ><button type="button" class="btn btn-danger btn-sm">Eliminar</button></a>
             </div>
 
             <div>
