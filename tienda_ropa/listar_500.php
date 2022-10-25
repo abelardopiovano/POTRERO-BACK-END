@@ -7,7 +7,7 @@ include("menu.php");
 
 
 <?php
-$conexion = mysqli_connect("localhost", "root", "");
+$conexion = mysqli_connect("localhost", "root", $_SESSION['PWD']);
 mysqli_select_db($conexion, "tp_7");
 $consulta = "SELECT * FROM ropa WHERE precio>500";
 $datos = mysqli_query($conexion, $consulta);
